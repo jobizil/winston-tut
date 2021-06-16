@@ -1,0 +1,15 @@
+{
+  "name": "winston-tut",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "nodemon app",
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "winston": "^3.3.3"
+  }
+}
