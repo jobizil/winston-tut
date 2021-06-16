@@ -45,6 +45,11 @@ body-parser@1.19.0:
     raw-body "2.4.0"
     type-is "~1.6.17"
 
+bson@~0.4.20:
+  version "0.4.23"
+  resolved "https://registry.yarnpkg.com/bson/-/bson-0.4.23.tgz#e65a2e3c7507ffade4109bc7575a76e50f8da915"
+  integrity sha1-5louPHUH/63kEJvHV1p25Q+NqRU=
+
 bytes@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.1.0.tgz#f6cf7933a360e0588fa9fde85651cdc7f805d1f6"
@@ -154,6 +159,11 @@ encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
   integrity sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=
+
+es6-promise@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-2.1.1.tgz#03e8f3c7297928e5478d6ab1d0643251507bdedd"
+  integrity sha1-A+jzxyl5KOVHjWqx0GQyUVB73t0=
 
 escape-html@~1.0.3:
   version "1.0.3"
@@ -273,7 +283,7 @@ inherits@2.0.3:
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
   integrity sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
 
-inherits@2.0.4, inherits@^2.0.3, inherits@~2.0.3:
+inherits@2.0.4, inherits@^2.0.3, inherits@~2.0.1, inherits@~2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
@@ -292,6 +302,11 @@ is-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-2.0.0.tgz#bde9c32680d6fae04129d6ac9d921ce7815f78e3"
   integrity sha512-XCoy+WlUr7d1+Z8GgSuXmpuUFC9fOhRXglJMx+dwLKTkL44Cjd4W1Z5P+BQZpr+cR93aGP4S/s7Ftw6Nd/kiEw==
+
+isarray@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
+  integrity sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=
 
 isarray@~1.0.0:
   version "1.0.0"
@@ -345,6 +360,22 @@ mime@1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
   integrity sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
+
+mongodb-core@1.2.31:
+  version "1.2.31"
+  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-1.2.31.tgz#f1e6405f03d40846fdb838a702507affa3cb2c39"
+  integrity sha1-8eZAXwPUCEb9uDinAlB6/6PLLDk=
+  dependencies:
+    bson "~0.4.20"
+
+mongodb@2.0.x:
+  version "2.0.55"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-2.0.55.tgz#a09dd77259f6bba69f7dd592a011c11aa5761097"
+  integrity sha1-oJ3Xcln2u6affdWSoBHBGqV2EJc=
+  dependencies:
+    es6-promise "2.1.1"
+    mongodb-core "1.2.31"
+    readable-stream "1.0.31"
 
 ms@2.0.0:
   version "2.0.0"
@@ -422,6 +453,16 @@ raw-body@2.4.0:
     http-errors "1.7.2"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+readable-stream@1.0.31:
+  version "1.0.31"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.0.31.tgz#8f2502e0bc9e3b0da1b94520aabb4e2603ecafae"
+  integrity sha1-jyUC4LyeOw2huUUgqrtOJgPsr64=
+  dependencies:
+    core-util-is "~1.0.0"
+    inherits "~2.0.1"
+    isarray "0.0.1"
+    string_decoder "~0.10.x"
 
 readable-stream@^2.3.7:
   version "2.3.7"
@@ -518,6 +559,11 @@ string_decoder@^1.1.1:
   dependencies:
     safe-buffer "~5.2.0"
 
+string_decoder@~0.10.x:
+  version "0.10.31"
+  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
+  integrity sha1-YuIDvEF2bGwoyfyEMB2rHFMQ+pQ=
+
 string_decoder@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.1.1.tgz#9cf1611ba62685d7030ae9e4ba34149c3af03fc8"
@@ -567,6 +613,13 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
+winston-mongo@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/winston-mongo/-/winston-mongo-1.1.1.tgz#4820c58cc4e432aeb91bd89fd3587428fe3ba6ff"
+  integrity sha1-SCDFjMTkMq65G9if01h0KP47pv8=
+  dependencies:
+    mongodb "2.0.x"
 
 winston-transport@^4.4.0:
   version "4.4.0"

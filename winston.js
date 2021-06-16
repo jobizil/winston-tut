@@ -1,4 +1,5 @@
 import winston from 'winston'
+import("winston-mongodb");
 const { transports, format, createLogger } = winston
 const { combine, printf } = format
 
@@ -19,6 +20,12 @@ const options = {
         maxSize: '10',
         filename: `combined-${ newdate }.log`,
         datePattern: 'YYYY-MM-DD-HH',
+    }, dbinfo: {
+        level: "info",
+        collection: "deliveryLog",
+        db: process.env.MONGO_URI,
+        options: { useNewUrlParser: true, useUnifiedTopology: true },
+        maxsize: 52428800, // 50MB
     },
     error: {
         level: 'error',
@@ -39,6 +46,7 @@ const logger = new createLogger({
     format: combine(customLog), transports: [
         new transports.File(options.info),
         new transports.File(options.error),
+        new transports.MongoDB(options.dbinfo),
         new transports.Console(options.console)
     ], exitOnError: false
 })
